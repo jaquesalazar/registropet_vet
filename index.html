@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="Image/veterinario.png">
+    <title>REGISTRO MASCOTA</title>
+</head>
+<body>
+
+<div class="form-container">
+    <nav class="info-section">
+        <div class="info-content">
+            <p>Registre a su mascota</p>
+        </div>
+    </nav>
+
+    <article class="form-section">
+        <div class="form-content">
+            <p class="p1">Asegúrese de que su mascota tenga la mejor atención</p>
+            <form class="user-form">
+                <label>
+                    <i class='bx bx-dog'><box-icon type='solid' name='dog'></box-icon></i>
+                    <input type="text" placeholder="Nombre">
+                </label>
+
+                <label>
+                    <i class='bx bx-dog'><box-icon type='solid' name='dog'></box-icon></i>
+                    <input type="text" placeholder="Raza">
+                </label>
+
+                <div class="gender-selection">
+                    <label>
+                        <i class='bx bx-search-alt-2'><box-icon name='search-alt-2'></box-icon></i>
+                        Género:
+                    </label>
+                    <button type="button" id="female" onclick="selectGender('female')">Hembra</button>
+                    <button type="button" id="male" onclick="selectGender('male')">Macho</button>
+                </div>
+
+                <div class="weight-selection">
+                    <label>
+                        <i class='bx bx-dog'><box-icon type='logo' name='baidu'></box-icon></i>
+                        Peso: (kg)</label>
+                    <button type="button" id="peso1" onclick="selectPeso('peso1')">0-25</button>
+                    <button type="button" id="peso2" onclick="selectPeso('peso2')">25-50</button>
+                    <button type="button" id="peso3" onclick="selectPeso('peso3')">50-100</button>
+                    <button type="button" id="peso4" onclick="selectPeso('peso4')">100+</button>
+                </div>
+
+                <label>
+                    <i class='bx bx-dog'><box-icon name='calendar-heart'></box-icon></i>
+                    Cumpleaños</label>
+                <input type="date" name="birthday">
+
+
+                <div class="submit-container">
+                    <input type="submit" value="Guardar">
+                    <input type="reset" value="Eliminar">
+                </div>
+            </form>
+        </div>
+    </article>
+</div>
+
+<script>
+  function selectGender(gender) {
+    document.getElementById('female').classList.remove('selected');
+    document.getElementById('male').classList.remove('selected');
+    document.getElementById(gender).classList.add('selected');
+  }
+  function selectPeso(peso) {
+    document.getElementById('peso1').classList.remove('selected');
+    document.getElementById('peso2').classList.remove('selected');
+    document.getElementById('peso3').classList.remove('selected');
+    document.getElementById('peso4').classList.remove('selected');
+    document.getElementById(peso).classList.add('selected');
+  }
+</script>
+
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+</body>
+</html>
